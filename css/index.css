@@ -1,0 +1,240 @@
+/* Inisialisasi Setup CSS */
+:root {
+  --primary: #1c0702;
+  --bg: #fdf0d2;
+  --cart-bg: #c23538; /* Added a variable for the cart background color */
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Titan One", sans-serif;
+  background-color: var(--bg);
+  color: #1c0702;
+}
+
+/* Navbar */
+
+.navbar .navbar-logo {
+  position: absolute;
+  margin-top: 40px;
+}
+
+.storeLogo {
+  height: 90px;
+  width: 90px;
+}
+
+.navbar .navbar-nav {
+  margin-left: 100px;
+}
+.navbar .navbar-extra {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .navbar-nav a {
+  color: #1c0702;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #c23538;
+}
+
+.navbar .navbar-extra a {
+  color: #1c0702;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: #c23538;
+}
+
+.navbar .navbar-extra .cart a:hover {
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  background-color: rgb(253, 240, 210, 0.8);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+
+/* Shopping Cart Icon */
+.navbar .navbar-extra .cart {
+  background-color: var(--cart-bg);
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.navbar .navbar-extra .cart a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .navbar-extra .cart i {
+  color: #fff;
+  width: 24px;
+  height: 24px;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/* Navbar End */
+
+/* Hero */
+.hero {
+  margin-top: 100px;
+  display: flex;
+  margin-bottom: 38px;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.hero img {
+  max-width: 1200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  image-rendering: auto;
+  border-radius: 25px;
+}
+/* Hero End */
+
+/* Footer */
+.footer-wrap {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.footer-wrap .footer-title {
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer-wrap .footer-phone {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer-wrap .footer-email {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.feather {
+  width: 24px;
+  height: 24px;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  /* navbar */
+  .navbar .navbar-logo {
+    display: flex;
+    position: relative;
+    margin: 0;
+  }
+
+  .storeLogo {
+    height: 70px;
+    width: auto;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: white;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--primary);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  /* Ensure navbar-extra stays to the right */
+  .navbar .navbar-extra {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  /* navbar end */
+
+  /* Hero */
+  .hero {
+    padding: 0 15px;
+  }
+  /* Hero end */
+}
+/* Mobile */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+  /* Ensure navbar-extra stays to the right */
+  .navbar .navbar-extra {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar .navbar-extra a {
+    font-size: 14px;
+  }
+}
